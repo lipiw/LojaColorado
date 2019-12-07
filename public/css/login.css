@@ -1,0 +1,29 @@
+.main{
+    margin:0 auto;
+    margin-top:37%;
+    padding: 0;
+}
+
+.modal-content{
+    background-color: #69abf1;
+    opacity: .85;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+p{
+    color: white;
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px;
+}
+
+.forgot{
+    padding: 5px 0;
+}
+
+.forgot a{
+    color: white;
+}

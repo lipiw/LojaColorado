@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Inclusão do Plugin jQuery Validation-->
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script src="carrinho.js"></script>
+
+
+    <link rel="stylesheet" href="css/bootstrap4.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>/*
+        $.post("/login",{email:email, pass:pass}, function(data){
+            if(data === 'done'){
+                window.location.href="/"
+            }
+        })*/
+
+        var url = "http://localhost:3000/pegarDados";
+        $(document).ready(function () {
+            var email, senha, entrar;
+            if ($("#idCliente").val()) {
+                var idCliente = $("#idCliente").val();
+            }
+            else {
+                var idCliente = '';
+            }
+            $.getJSON(url, function (result) {
+                var arr = result;
+                console.log(arr);
+                
+               $("#entrar").text(arr.email);
+               
+                
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <%- body %>
+        </div>
+    </main>
+</body>
+
+</html>
